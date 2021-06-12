@@ -8,7 +8,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class ConLocator {
+public class ConnLocator {
 	public static Connection getConnect(){
 		//DataSource를 이용해서 Connection 객체를 생성하면 2가지 이점이 있다.
 		//1. 드라이브 로드와 DriverManager 약할을 한다.

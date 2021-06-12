@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import kr.or.kpc.dto.MemberDto;
-import kr.or.kpc.util.ConLocator;
+import kr.or.kpc.util.ConnLocator;
 
 
 
@@ -32,7 +32,7 @@ public class MemberDao {
 		ResultSet rs = null;
 		
 		try {
-			con = ConLocator.getConnect();
+			con = ConnLocator.getConnect();
 			StringBuilder sql = new StringBuilder();
 			sql.append("SELECT num, NAME, addr ");
 			sql.append("FROM member ");
@@ -59,18 +59,22 @@ public class MemberDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally {
-				try {
-					if (con != null) con.close();//Connection 자원을 반납
-					if (pstmt != null) pstmt.close();
-					if(rs != null) rs.close();
-				} catch (SQLException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+				close(con, pstmt, rs);
 		}
 
 		return list;
 
+	}
+
+	private void close(Connection con, PreparedStatement pstmt, ResultSet rs) {
+		try {
+			if (con != null) con.close();//Connection 자원을 반납
+			if (pstmt != null) pstmt.close();
+			if(rs != null) rs.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	
