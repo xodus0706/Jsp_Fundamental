@@ -1,7 +1,7 @@
 <!-- step01_grid_lg.html -->
 <%@page pageEncoding="utf-8" %>
   <!-- breadcrumb start -->
-<%@include file="../inc/header1.jsp" %>
+<%@include file="../inc/header.jsp" %>
   <!-- breadcrumb start -->
 
 <nav aria-label="breadcrumb">

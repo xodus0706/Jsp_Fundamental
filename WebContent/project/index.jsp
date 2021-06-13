@@ -1,7 +1,22 @@
 <!-- step01_grid_lg.html -->
 <%@page pageEncoding="utf-8" %>
-<%@include file="../inc/header.jsp" %>
+<%@include file="../pinc/header.jsp" %>
   <!-- breadcrumb start -->
+  <style>
+.breadcrumb-item{
+color: white;
+font-family:fantasy;
+font-size: 20px;
+}
+</style>
+
+
+<nav aria-label="breadcrumb" >
+  <ol class="breadcrumb" style="background-color: green">
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home ></a></li>
+    <li class="breadcrumb-item">Program</li>
+  </ol>
+</nav>
   <!-- breadcrumb end -->
   <!-- container start -->
     <div class="container">
@@ -14,7 +29,7 @@
     	
     			
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height :550px; width : 900px; margin : 0 auto;">
-					<h1>Hello!</h1>
+					<h1>.</h1>
 				  <ol class="carousel-indicators">
 				    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 				    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>

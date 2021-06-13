@@ -3,7 +3,7 @@
 <%@ page import="kr.or.kpc.dto.NoticeDto"%>
 <%@ page import="kr.or.kpc.dao.NoticeDao"%>
 <%@ page pageEncoding="utf-8"%>
-<%@ include file="../inc/header.jsp"%>
+<%@ include file="../pinc/header.jsp"%>
 <%
 String tempPage = request.getParameter("page");
 int cPage = 0;
@@ -37,13 +37,31 @@ int start = 0 + (cPage-1)*displayCount;
 NoticeDao dao = NoticeDao.getInstance();
 ArrayList <NoticeDto> list = dao.select(start,displayCount);
 %>
-
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <!-- breadcrumb start -->
-<nav aria-label="breadcrumb">
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="/index.jsp">홈</a></li>
-		<li class="breadcrumb-item">공지사항</li>
-	</ol>
+<style>
+.breadcrumb-item{
+color: white;
+font-family:fantasy;
+font-size: 20px;
+}
+
+h4{
+font-family: 'Gaegu', cursive;
+position: relative;
+top: 10px;
+}
+
+</style>
+
+
+<nav aria-label="breadcrumb" >
+  <ol class="breadcrumb" style="background-color: green">
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home ></a></li>
+    <li class="breadcrumb-item">Notice</li>
+    
+
+  </ol>
 </nav>
 <!-- breadcrumb end -->
 
@@ -53,7 +71,7 @@ ArrayList <NoticeDto> list = dao.select(start,displayCount);
 	<div class="row">
 		<div class="col-md-12">
 			<%-- table start --%>
-			<h5>공지사항 리스트</h5>
+			<h4>공지사항 리스트</h4>
 			<div class="table-responsive">
 				<table class="table table-hover">
 				<colgroup>
@@ -158,7 +176,7 @@ ArrayList <NoticeDto> list = dao.select(start,displayCount);
 						
 						
 						<li class="page-item<%if(totalBlock == currentBlock){ %> disabled"<%}%>>
-						<a class="page-link" href="lsit.jsp?page=<%=endPage+1%>">Next</a>
+						<a class="page-link" href="lsit.jsp?page=<%=endPage+1%>"tabindex="-1" aria-disabled="true">Next</a>
 						</li>
 						
 					</ul>

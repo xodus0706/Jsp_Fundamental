@@ -2,7 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="kr.or.kpc.dto.ParkDto"%>
 <%@ page pageEncoding="utf-8"%>
-<%@ include file="../inc/header.jsp"%>
+<%@ include file="../pinc/header.jsp"%>
 <%
 	ParkDto dto = new ParkDto();
 	ParkDao dao = ParkDao.getInstance();
@@ -10,64 +10,81 @@
 	ArrayList<ParkDto> list = dao.resall();
 	int size = list.size();
 %>
-<nav aria-lavel="breadcrumb">
-	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="/index.jsp">홈</a></li>
-		<li class="breadcrumb-item"><a href="/index.jsp">디렉토리</a></li>
-		<li class="breadcrumb-item active" aria-current="page">Data</li>
-	</ol>
+
+<nav aria-label="breadcrumb" >
+  <ol class="breadcrumb" style="background-color: green">
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home ></a></li>
+    <li class="breadcrumb-item">Program</li>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+ </ol>
 </nav>
+
+<style>
+.breadcrumb-item{
+color: white;
+font-family:fantasy;
+font-size: 20px;
+}
+
+
+.text{
+position: relative;
+text-align:left;
+font-family: 'Gaegu', cursive;
+top: 3%;
+font-size : 53px;
+}
+
+#btn1 {
+  margin: 0;
+  position: absolute;
+  border-radius: 12px;
+  top: 16%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+font-family: 'Gaegu', cursive;
+  background-color: white;
+color:green;
+  font-size:20px;
+  href="#";
+  width:70px;
+}
+
+#address{
+position:relative;
+
+}
+
+h5{
+font-family: 'Gaegu', cursive;
+}
+</style>
+
+
 <!-- container start -->
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<!-- table start -->
-			<h3>공원 맵</h3>
+			<p class="text">당신은 현재 어디에 있나요?</p>
 			<div class="table-responsive">
-				<%--pagination start--%>
-				<nav aria-label="Page navigation example">
-					<ul class="pagination justify-content-center">
-						<li class="page-item disabled"><a class="page-link" href="#"
-							tabindex="-1" aria-disabled="true">Previous</a></li>
-						<li class="page-item"><a class="page-link" href="#">1</a></li>
-						<li class="page-item"><a class="page-link" href="#">2</a></li>
-						<li class="page-item"><a class="page-link" href="#">3</a></li>
-						<li class="page-item"><a class="page-link" href="#">Next</a>
-						</li>
-					</ul>
-				</nav>
-				<%--pagination end--%>
-				<div class="text-right">
-					<a class="btn btn-success" href="write.jsp" role="button">글쓰기</a>
-				</div>
-			</div>
-			<!-- table end -->
+
 			
-            <div style="width:300px; margin : 20px;">
-	            <label for="year">연령대</label>
-	            <select id="years">
-	              <option value="age">10</option>
-	              <option value="age">20</option>
-	              <option value="age">30</option>
-	              <option value="age">40</option>
-	              <option value="age">50</option>
-	              <option value="age">60</option>
-	              <option value="age">70</option>
-	              <option value="age">80</option>
-	            </select><br>
-	            <label for="addr">위치</label><br>
-	            <input type="text" id="address" placeholder="주소 입력 하거라" size=30>
-	            <button id="btn">START</button>
+            <div style="width:450px; margin : 20px;">
+	   
+	            <input type="text" class="form-control" id="address" placeholder="도로명 주소를 입력하세요">
+	            <button id="btn1" class="btn btn-outline-success" >START</button>
           	</div>
+          	
             
 			
 			<br><br>
 			<!-- 지도를 표시할 div 입니다 -->
-			<p style="margin-top:-12px">
+			<p style="margin-top:-12px;">
 			    <em class="link">
-			        <a href="javascript:void(0);" onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')">
-			            혹시 주소 결과가 잘못 나오는 경우에는 여기에 제보해주세요.
-			        </a>
+			        <h5>혹시 주소 결과가 잘못 나오는 경우에는 여기에 제보해주세요.
+			        <button id="btn" class="btn btn-outline-danger" href="javascript:void(0);" onclick="window.open('http://fiy.daum.net/fiy/map/CsGeneral.daum', '_blank', 'width=981, height=650')">여기!</button></h5>
 			    </em>
 			</p>
 			<div id="map" style="width: 100%; height: 550px;"></div>
@@ -90,7 +107,7 @@
 				var positions = [
 				<%
 					int index=0;
-					for(ParkDto dto1 : list){
+					for(ParkDto dto1 : list){ 
 					index++;
 				%>
 					    {
@@ -168,5 +185,6 @@
 			</script>
 		</div>
 	</div>
+</div>
 </div>
 <%@ include file="../inc/footer.jsp"%>

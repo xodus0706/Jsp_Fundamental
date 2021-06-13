@@ -71,7 +71,7 @@ color: white;
    <div class="title">
    <h1 style="font-family:fantasy; color:white; font-size:75px;">Are you looking for a NEARBY PARK?</h1></div>
    <div class="button" >
-   <a href="/project/index.jsp" class="button">
+   <a href="/project/program.jsp" class="button">
    <button class="button" style="vertical-align:middle" ><span>Go!</span></button>
    </div>
   </div>
