@@ -71,7 +71,7 @@ nav a:hover {
       <ul>
         <li><a href="/project/program.jsp">Park Recommendation?</a></li>
         <li><a href="/project/park.jsp">Program</a></li>
-         <li><a href="/notice/list.jsp">Notice</a></li>
+         <li><a href="/project/list.jsp">Notice</a></li>
         <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	         Exercise
