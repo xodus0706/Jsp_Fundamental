@@ -78,7 +78,7 @@ nav a:hover {
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="/project/upper.jsp">상체운동</a>
-	          <a class="dropdown-item" href="#">하체운동</a>
+	          <a class="dropdown-item" href="/project/down.jsp">하체운동</a>
 	          <div class="dropdown-divider"></div>
       
 		<!-- navbar end -->    

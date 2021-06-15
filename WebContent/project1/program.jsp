@@ -1,10 +1,10 @@
 <!-- template.html -->
 <%@ page pageEncoding="utf-8" %>
-<%@ include file="header.jsp" %>
+<%@ include file="../pinc/header.jsp" %>
   	<!-- breadcrumb start -->
   	<nav aria-label="breadcrumb">
 	 <ol class="breadcrumb" style="background-color: green">
-    <li class="breadcrumb-item"><a href="q.jsp" style="color:white">Back </a></li>
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home </a></li>
 	  </ol>
 	</nav>
 	<!-- breadcrumb end -->
@@ -18,7 +18,7 @@
 		</div>
 		<!-- col end -->
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-	
+	</div>
 	<!-- container end -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -111,11 +111,10 @@ color: white;
 				    <span class="sr-only">Next</span>
 				  </a>
 				  				<div class="button" >
-   <a href="park.jsp" class="button">
+   <a href="/project/park.jsp" class="button">
    <button class="button" style="vertical-align:middle" ><span>우리가 찾아줄게요!</span></button>
-   </a>
    </div>
-</div>
+				</div>
 
     	
     		<%--slide end --%>

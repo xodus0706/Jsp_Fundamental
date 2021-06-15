@@ -1,6 +1,6 @@
 <!-- step01_grid_lg.html -->
 <%@page pageEncoding="utf-8" %>
-<%@include file="header.jsp" %>
+<%@include file="../pinc/header.jsp" %>
   <!-- breadcrumb start -->
   <style>
 .breadcrumb-item{
@@ -13,7 +13,7 @@ font-size: 20px;
 
 <nav aria-label="breadcrumb" >
   <ol class="breadcrumb" style="background-color: green">
-    <li class="breadcrumb-item"><a href="index.jsp" style="color:white">Home ></a></li>
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home ></a></li>
     <li class="breadcrumb-item">Program</li>
   </ol>
 </nav>
@@ -65,4 +65,4 @@ font-size: 20px;
   <!-- col end -->
     </div>
   <!-- container end -->
-<%@include file="footer.jsp" %>
+<%@include file="../inc/footer.jsp" %>

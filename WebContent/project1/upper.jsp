@@ -1,10 +1,10 @@
 <!-- template.html -->
 <%@ page pageEncoding="utf-8" %>
-<%@ include file="header.jsp" %>
+<%@ include file="../pinc/header.jsp" %>
   	<!-- breadcrumb start -->
   	<nav aria-label="breadcrumb">
 	 <ol class="breadcrumb" style="background-color: green">
-    <li class="breadcrumb-item"><a href="/project/program.jsp" style="color:white">Home > </a></li>
+    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home > </a></li>
      <li class="breadcrumb-item">Exercise ></li>
      <li class="breadcrumb-item">상체운동</li>
 	  </ol>
@@ -19,6 +19,7 @@
 			</div>
 		</div>
 		<!-- col end -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
 	</div>
 	<!-- container end -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -168,6 +169,6 @@ margin: 0;
   <!-- col end -->
     </div>
   <!-- container end -->
-<%@include file="footer.jsp" %>
+<%@include file="../pinc/footer.jsp" %>
 
 
