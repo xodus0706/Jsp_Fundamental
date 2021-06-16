@@ -10,7 +10,7 @@
 	CustomerDto dto = dao.getLogin(email, pwd);
 	if(dto != null){
 		if(dto.getStatus().equals("1")){
-			session.setMaxInactiveInterval(30);//초
+			session.setMaxInactiveInterval(60*3);//초
 			session.setAttribute("login",dto);
 			response.sendRedirect("list.jsp?page=1");
 		}else{
