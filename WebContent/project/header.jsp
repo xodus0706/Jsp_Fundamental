@@ -11,7 +11,6 @@
 	<script src="/js/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 	<script>
-
     $(function(){
         $('#btn').click(function(){
            $.ajax({
@@ -37,25 +36,25 @@
                           }
                   }
                   if(IDEX_NM == "좋음"){
-                     $('#sel2').append(" 미세먼지는 보통이나 유의하시기 바랍니다.");
+                     $('#sel2').append("쾌적합니다. 마음껏 외출하셔도 괜찮은데 마스크! 잊지마세요~");
                   }
                   else   if(IDEX_NM == "보통"){
-                     $('#sel2').append(" 미세먼지는 안좋으니 외출 자제하시길 바랍니다.");              
-              	}
+                     $('#sel2').append("대기질은 양호하나, 일부 대기오염 민감군에 영향을 줄 수 있습니다.");
+              }
                   else if(IDEX_NM == "나쁨"){
-                     $('#sel2').append("미세먼지는 민감한 분들에ㄱ");
-              	}
+                     $('#sel2').append("건강한 일반인에서 대기오염으로 인한 경미한 반응이 나타나며, <br>민감군에 미치는 영향은 좀 더 클 수 있습니다.");
+                  }
                   else if(IDEX_NM == "매우 나쁨"){
-                      $('#sel2').append("미세먼지는 매우 나쁘니 외출을 가급적 삼가해주시길 바랍니다.");
-               	}
+                     $('#sel2').append("건강한 일반인에서 대기오염으로 인한 경미한 반응이 나타나며, <br>민감군에 미치는 영향은 좀 더 클 수 있습니다.");
+                  }
                   else if(IDEX_NM == "위험"){
-                      $('#sel2').append("미세먼지는 아주 나쁘니 외출을 절대 하지마시길 바랍니다.");
-               	}
+                     $('#sel2').append("건강한 일반인에서 대기오염으로 인한 건강상의 심각한 반응이 나타날 수 있습니다.");
+                  }
                }
-           });
-           
-        });
-    });
+         });
+  });
+ });
+  
       
     </script>
     <script src = "http://openapi.seoul.go.kr:8088/715142614f7170613131326449687761/json/RealtimeCityAir/1/25?call=test"></script>
@@ -128,10 +127,9 @@
 	  margin: 0;
 	  position: absolute;
 	  border-radius: 12px;
-	  top:78% ;
-	  left: 48%;
-	  -ms-transform: translate(-50%, -50%);
-	  transform: translate(-50%, -50%);
+	  top:68% ;
+	  left: 43%;
+	 
 	font-family: 'Gaegu', cursive;
 	  background-color: white;
 	color:green;
@@ -151,13 +149,8 @@ h3{
 	#address{
 	position:relative;
 	}
-	#weather1{
-	position: absolute;
-	top:8.5% ;
-	  left: 43%;
-	  -ms-transform: translate(-50%, -50%);
-	  transform: translate(-50%, -50%);
-	}
+	
+
 
 </style>
   </head>
@@ -167,11 +160,11 @@ h3{
     <div class="Nav">
       <ul>
         <li><a href="program.jsp">HOME</a></li>
-        <li><a href="park.jsp">Program</a></li>
-         <li><a href="list.jsp">Notice</a></li>
+        <li><a href="park.jsp">PARK</a></li>
+         <li><a href="list.jsp">SUGGESTION</a></li>
         <li class="nav-item dropdown">
 	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	         Exercise
+	         EXERCISE
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 	          <a class="dropdown-item" href="upper.jsp">상체운동</a>

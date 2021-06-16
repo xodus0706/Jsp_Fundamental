@@ -1,3 +1,4 @@
+<%@page import="kr.or.kpc.dto.CustomerDto"%>
 <%@ page pageEncoding="utf-8"%>
 <!doctype html>
 <html lang="en">
@@ -42,10 +43,20 @@
 	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 	      </li>
 	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
+	    <span class = "navabr-text">
+	    <%
+	    CustomerDto customerDto = (CustomerDto)session.getAttribute("login");
+	    if(customerDto == null){
+	    %>
+	    
+	    <a href = "/member/login.jsp">로그인</a>
+	    <a href = "/member/join.jsp">회원가입</a>
+	    
+	    <%=customerDto.getName() %>님 안녕하세요..
+	    <a href = "/member/logout.jsp">로그아웃</a>
+	    <a href = "/member/login.jsp">마이페이지</a>
+	    <%} %>
+	    </span>
 	  </div>
 	</nav>
   	<!-- navbar end -->

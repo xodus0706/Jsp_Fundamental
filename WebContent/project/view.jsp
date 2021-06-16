@@ -42,16 +42,20 @@
 	</script>
 <%}else{%>
 	<%@ include file="header.jsp" %>
-  	<!-- breadcrumb start -->
   	
   	<!-- breadcrumb start -->
   	<nav aria-label="breadcrumb">
 	 <ol class="breadcrumb" style="background-color: green">
-    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">Home </a></li>
-    <li class="breadcrumb-item"><a href="/project/index.jsp" style="color:white">> Suggestion </a></li>
+    <li class="breadcrumb-item"><a href="program.jsp" style="color:white">Home > </a></li>
+    <li class="breadcrumb-item" style="color:white">Suggestion </a></li>
 	  </ol>
 	</nav>
 	<!-- breadcrumb end -->
+	
+	
+	<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
   	
   	<!-- container start -->
 	<div class="container">
@@ -68,64 +72,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
 <style>
-.text{
-text-align:center;
-font-family: 'Gaegu', cursive;
-top: 55%;
-font-size : 53px;
-}
-#carouselExampleIndicators{
- margin: 0;
-  position: absolute;
-  border-radius: 12px;
- top: 55%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.button {
-  margin: 0;
-  position: absolute;
-  border-radius: 12px;
-  top: 110%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-font-family: 'Gaegu', cursive;
-  background-color: white;
-color:green;
-  font-size:40px;
-  href="/notice/main.jsp";
-  width:400px;
 
-}
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-.button:hover{
-background-color:green; 
-color: white; 
- box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.button:hover span {
-  padding-right: 25px;
-}
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-
+h5{
+		font-family: 'Gaegu', cursive;
+		}		
 </style>	
 	
   	<!-- container start -->

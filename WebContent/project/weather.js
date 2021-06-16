@@ -9,7 +9,7 @@ const weatherIcon = document.getElementById('icon');
 const commentmessage = document.querySelector(".comment");
 
 const COORDS = "coords";
-const API_key = "ec1a6b926ab4ad92e04e244e2441e3d0";
+const API_key = "9cd681a7f5499602685b90e917300c3a";
 
 function getWeather(lat, lng) {
     fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${API_key}&units=metric`
